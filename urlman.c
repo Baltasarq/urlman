@@ -79,10 +79,9 @@ void parse_file(const char * fn, char * url)
                 lines[ num_lines ] = strdup( buffer );
                 ++num_lines;
         }
-
         if ( num_lines == 0
           || ( num_lines == 1
-            && ( lines[ 0 ] != NULL
+            && ( lines[ 0 ] == NULL
               || strlen( lines[ 0 ] ) == 0 ) ) )
         {
             *url = 0;
